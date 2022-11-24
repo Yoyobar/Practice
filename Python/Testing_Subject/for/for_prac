@@ -1,0 +1,10 @@
+days = [31,29,31,30,31,30,31,31,30,31,30,31]
+for i in range(len(days)): #days 리스트의 수를 불러와서 각각지정
+    day=days[i]
+    print('{}월의 날짜수는 {}일 입니다.'.format(i+1,day))
+
+    
+days = [31,29,31,30,31,30,31,31,30,31,30,31]
+for i, day in enumerate(days): #두개의 숫자를 0에서부터 차례대로 days함수 개수만큼 세어서 반복함
+    day=days[i]
+    print('{}월의 날짜수는 {}일 입니다.'.format(i+1,day))      
