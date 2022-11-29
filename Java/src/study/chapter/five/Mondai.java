@@ -23,6 +23,9 @@ public class Mondai {
         int big;
         int diff;
 
+        big = num1 > num2 ? num1 : num2;
+        diff = num1 > num2 ? num1-num2 : num2-num1;
+
         if (num1 > num2) {
             System.out.println("큰 수 : " + num1);
             System.out.println("절대값 : " + (num1 - num2));
@@ -113,13 +116,48 @@ public class Mondai {
         System.out.println("2 또는 7의 배수의 합 : " + result);
     }
     public void methodEight() {
-        // 5-5-1 1부터 10까지 곱의 결과를 출력하는 프로그램을 for문을 이용하여 작성해보자.
+        // 5-5-1 1부터 10까지 곱의 결과를 출력하는 프로그램을 for문을 이용하여 작성해보자. false가 나오면 멈춤
         int result = 1;
-        for (int i=1; i<11; i++){
+        for (int i=1; i!=10; i++){
             result *= i;
         }
         System.out.println(result);
     }
-    public void methodNine
+    public void methodNine() {
+        // 5-5-2 구구단중 5단을 출력하는 프로그램을 for문을 이용하여 작성
+        for (int i =1; i<10; i++){
+            System.out.println(5*i);
+        }
+    }
+    public void methodTen() {
+        // 5-6-1 while문을 for로 수정해보기
+        int count = 0;
+        for (int num=1; num < 100; num++){
+            if (num % 5 != 0 || num % 7 != 0) // 5의 배수도 아니고 7의 배수도 아니라는건, 즉 5와 7의배수를 제외한 값은 전부 밴한다는 뜻이다.
+                continue;
+            count ++;
+            System.out.println(num);
+        }
+        System.out.println(count);
+    }
+    public void methodEleven() {
+        // 5-6-2 자연수 1부터 시작해서 모든 홀수를 더해 나간다. 그리고 그 합이 1000을 언제 넘어서는지, 그리고 1000을 넘엇을때의 값은 몇인지 계산하자.
+        int num = 0;
+        int count = 0;
+        int value = 0;
+        while (true){
+            num++;
+            if ((num % 2) == 0)
+                continue;
+            else {
+                value += num;
+                count++;
+            }
+            if (value > 1000)
+                break;
+        }
+        System.out.println("홀수를 더한 횟수는" + value + "입니다.");
+        System.out.println("1000을 넘었을 때의 값은" + count + "입니다.");
+    }
 }
 
