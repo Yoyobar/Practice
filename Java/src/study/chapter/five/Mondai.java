@@ -159,5 +159,34 @@ public class Mondai {
         System.out.println("홀수를 더한 횟수는" + value + "입니다.");
         System.out.println("1000을 넘었을 때의 값은" + count + "입니다.");
     }
+    public void methodTwelve(){
+        // 구구단의 짝수 단인 2, 4, 6, 8만 출력하는 프로그램을 작성하죄 2단은 2x2까지, 4단은 4x4까지, 6단은 6x6까지, 8단은 8x8까지만 출력한다.
+        // 다음부터 조건 자체와 != ==의 차이를 인지할 것
+        abs : for (int i = 1; i < 10; i++){
+            if ((i % 2) != 0)
+                continue;
+            for (int j = 1; j < 10; j++){
+                if (j == (i+1))
+                    continue abs;
+                System.out.print(i + " x " + j + " = ");
+                System.out.println(i * j);
+            }
+        }
+    }
+    public void methodThirteen(){
+        /* 다음 식을 만족 하는 모든 A와 B의 조합
+         AB
+        +BA
+        ----
+         99
+         */
+        for (int i = 0; i<100; i++){
+            for (int j = 0; j<100; j++){
+                if (i+j != 99)
+                    continue;
+                System.out.println("A : " + i + " | B : " + j);
+            }
+        }
+    }
 }
 

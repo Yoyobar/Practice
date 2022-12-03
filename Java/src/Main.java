@@ -9,6 +9,8 @@ public class Main {
         BreakBasic test3 = new BreakBasic();
         ContinueBasic test4 = new ContinueBasic();
         ForInFor test5 = new ForInFor();
-        test5.methodOne();
+        ByTimes test6 = new ByTimes();
+        BreakPoint test7 = new BreakPoint();
+        test1.methodThirteen();
     }
 }
