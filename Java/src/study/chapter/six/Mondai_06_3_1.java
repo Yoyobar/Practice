@@ -3,13 +3,12 @@ package study.chapter.six;
 public class Mondai_06_3_1 {
     //인자로 정수 n을 전달받아서 2의 n승을 계산하여 반환하는 메소드를 재귀의 형태로 정의하고 이를 호출하는 main 메소드를 정의하자.
     public static void main(String[] args) {
-        System.out.println(number(5));
+        System.out.println(number(3));
     }
-
     public static int number(int n) {
-        if(n == 0)
+        if (n==0)
             return 1;
-        return 2 * number(n - 1);
+        return 2 * number(n-1);
 
         /*
         설명 과정이 꽤나복잡하다. 잘 이해해라, 재귀적 표현은 문제를 풀때 크게 도움이된다.

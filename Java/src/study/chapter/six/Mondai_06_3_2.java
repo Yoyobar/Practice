@@ -6,18 +6,26 @@ public class Mondai_06_3_2 {
         toBinary(10);
     }
 
-    public static int toBinary(int data){
-        //나머지를 저장해줄 값과 나머지를 선언할 값이 필요, 그전에 조건부터
-        if (data > 0){
-            int memory = data / 2;  //남은 몫을 보관할 메모리다. data / 2의 값을 선언한다.
-            int result = data % 2;  //남은 나머지값이다. data의 나머지를 선언한다.
-            data /= 2; //data는 If문에서 계속해서 반감된다. 반감후 다시 재귀선언
+    public static int toBinary(int n) {
+        if (n > 0) {
+            int mem = n / 2;
+            int bin = n % 2;
+            n /= 2;
 
-            toBinary(data); // 재귀함수를 선언한다.
-            System.out.print(result);
+            toBinary(n);
+            System.out.print(bin);
+        }
+        return 0;
+    }
 
-        }return 0;
+    public static int toTest(int n) {
+        if (n > 0) {
+            int value = n / 2;
+            int number = n % 2;
+            n /= 2;
+
+            toTest(n);
+            System.out.print(number);
+        } return 0;
     }
 }
-
-//이식은 재귀함수로 반복해서 내부에 남아있지만, 실제로 재귀함수를 Return하진않으므로 값이없다. 그러다 결국에 if조건에서 벗어나서 나가게되버림
