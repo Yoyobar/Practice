@@ -7,7 +7,6 @@ public class Mondai_06_3_2 {
     }
     public static int dataR(int n){
         if (n > 0) {
-            int mem = n / 2; //5
             int data = n % 2;  //0
             n /= 2;
 
