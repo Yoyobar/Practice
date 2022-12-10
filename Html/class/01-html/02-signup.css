@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+.backGround{
+    display: flex;
+    width: 1920px;
+    height: 1080px;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    width: 670px;
+    height: 960px;
+    left: 725px;
+    top: 132px;
+    border: solid 3px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: #FFFFFF;
+    border: 1px solid #AACDFF;
+    box-shadow: 7px 7px 39px
+        rgba(0, 104, 255, 0.25);
+    border-radius: 20px;
+}
+.center{
+    width: 470px;
+    height: 818px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+}
+.message{
+    width: 466px;
+    height: 94px;
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+
+    color: #0068FF;
+}
+.mainLine{
+    width: 470px;
+    height: 1px;
+    background: #E6E6E6;
+
+}
+.subMessage{
+    width: 158px;
+    height: 23.65px;
+
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #797979;
+}
+.subLineBlue{
+    width: 466px;
+    height: 0px;
+    border: solid 1px #0068FF;
+}
+.subLineNormal{
+    width: 466px;
+    height: 0px;
+    border: solid 1px #E6E6E6;
+}
+.groupBox{
+    width: 466px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sexBox{
+    width: 140px;
+    height: 23.96px;
+    display: flex;
+    justify-content: space-between;
+}
+.sexSubBox{
+    width: 55px;
+    height: 23.94px;
+    display: flex;
+
+}
+.sexRadio{
+    width: 20px;
+    height: 19.95px;
+    border: solid 1px #D2D2D2;
+}
+.sexMessage{
+    width: 30px;
+    height: 23.94px;
+    
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+.checkBox{
+    width: 454px;
+    height: 21.06px;
+    display: flex;
+    justify-content: space-evenly;
+
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+.checkBoxButtonBox{
+    width: 20px;
+    height: 20px;
+}
+.checkBoxButton{
+    width: 20px;
+    height: 20px;
+
+    background: #FFFFFF;
+    border: solid 1px #C4C4C4;
+    border-radius: 3px;
+}
+.registerBox{
+    width: 470px;
+    height: 75px;
+    border: solid 1px #0068FF;
+    border-radius: 10px;
+
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #0068FF;
+}

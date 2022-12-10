@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>박스 테스트</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 80px;
+            height: 80px;
+            border: 1px solid red;
+            padding: 10px;
+        } 
+
+        .pb {
+            width: 500px;
+            height: 500px;
+            border: 1px solid blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items:  center;
+            padding: 50px;
+        }
+        /*
+        #contentBox {
+            box-sizing: content-box;
+        }
+        #borderBox {
+            box-sizing: border-box;
+        }
+        
+    flex : 여러태그를 하나로 묶음 수직 : column, 수평 : row; align만 방향이 다름 */
+    </style>
+</head>
+<body>
+    <!-- <div id="nomo">박스 1</div>
+    <div>박스 2</div>
+    <div id="mono" >박스 3</div> -->
+    <div class="pb">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

@@ -2,28 +2,70 @@
 <html lang="ko">
 <head>
     <title>회원가입</title>
+    <link href="./02-signup.css" rel="stylesheet">
 </head>
 <body>
-    <h2>회원가입</h2>
-    <input type="email" placeholder="이메일을 입력해 주세요."><br><br>
-    <input type="text" placeholder="이름을 입력해 주세요."><br><br>
-    <input type="password" placeholder="비밀번호를 입력해 주세요."><br><br>
-    <input type="password" placeholder="비밀번호를 다시 입력해 주세요."><br><br>
-    <select>
-        <option disabled="true" selected="true">지역을 선택하세요</option> 
-        <!-- 처음으로 선택되어있어야하고, 고르지 못하게 해야되므로 각각 설정해야함 -->
-        <option>서울</option>
-        <option>경기</option>
-        <option>그외</option>
-    </select>
-    <br><br>
-    <input type="radio" name="gender"><span>여성</span>
-    <input type="radio" name="gender"><span>남성</span>
-    <br><br>
-    <input type="checkbox"><span>이용약관 개인정보 수집 및 이용제공에 동의합니다.</span>
-    <hr>
-    <button>가입하기</button>
-    <!-- 과거에는 button을 type형으로 넣었음 cmd+/ 로 주석 추가함. -->
-
+    <div class = "backGround">
+        <div class = "main">
+            <div class = "center">
+                <div class = "message">
+                    회원 가입을 위해 <br> 정보를 입력해주세요
+                </div>
+                <div class = "groupBox">
+                    <div class = "subMessage" div name = "Group1">
+                        * 이메일 
+                    </div>
+                    <div class = "subLineBlue"></div>
+                </div>
+                <div class = "groupBox">
+                    <div class = "subMessage" div name = "Group2">
+                        * 이름
+                    </div>
+                    <div class = "subLineNormal"></div>
+                </div>
+                <div class = "groupBox">
+                    <div class = "subMessage" div name = "Group3">
+                        * 비밀번호
+                    </div>
+                    <div class = "subLineNormal"></div>
+                </div>
+                <div class = "groupBox">
+                    <div class = "subMessage" div name = "Group4">
+                        * 비밀번호 확인
+                    </div>
+                    <div class = "subLineNormal"></div>
+                </div>
+                <div class = "sexBox">
+                    <div class = "sexSubBox">
+                        <input name = "sex" class = "sexRadio" type="radio">
+                        <div class = "sexMessage" div name = "female">
+                            여성
+                        </div>
+                    </div>
+                    </input>
+                    <div class = "sexSubBox">
+                        <input name = "sex" class = "sexRadio" type="radio">
+                        <div class = "sexMessage" div name = "female">
+                            남성
+                        </div>
+                    </div>
+                    </input>
+                    </input>
+                </div>
+                <div class = "checkBox">
+                    <div class = "checkBoxButtonBox">
+                        <div class = "checkBoxButton"></div>
+                    </div>
+                    이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.
+                </div>
+                <div class = "mainLine"></div>
+                <div class = "registerBox">
+                    가입하기
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>

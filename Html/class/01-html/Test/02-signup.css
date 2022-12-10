@@ -1,0 +1,149 @@
+ /* HTML 태그는 모두 박스 모델로 이루어져 있다. */
+ /* border : 바깥 테두리 */
+ /* 보더박스 : 고정된 박스, 콘텐츠 박스 : 여백과 테두리가 콘텐츠 사이즈에 맞춰 바뀜 */
+*{
+    box-sizing: border-box;
+}
+hr{
+    width: 470px;
+    height: 1px;
+    background: #e6e6e6;
+}
+#Group5{
+    width: 466px;
+    height: 80px;
+    left: 725px;
+    top: 589px;
+
+
+}
+
+.box{
+    width: 158px;
+    height: 23.65px;
+    width: 466px;
+    height: 0px;
+    border: 1px solid #0068ff;
+
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    
+    color: #797979;
+}
+
+.box2{
+    width: 466px;
+    height: 80px;
+}
+#bg {
+    width: 1920px;
+    height: 1000px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center; /* 가로 */
+    align-items: center; /* 세로 */
+}
+#main {
+    width: 670px;
+    height: 960px;
+    left: 625px;
+    top: 60px;
+
+    background: #FFFFFF;
+    border: 1px solid #AACDFF;
+    box-shadow: 7px 7px 39px
+        rgba(0, 104, 255, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#Group5 {
+    width: 470px;
+    height: 818px;
+    left: 100px;
+    top: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#agree{
+    width: 454px;
+    height: 21.06px;
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+
+    
+}
+#regis_top{
+    width: 466px;
+    height: 94px;
+
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+
+    color: #0068FF;
+}
+#regis_bot{
+    width: 470px;
+    height: 75px;
+    border: 1px solid #0068ff;
+    border-radius: 10px;
+    
+    
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    color: #0068FF;
+}
+.sex{
+    width: 140px;
+    height: 23.94px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sexBlock{
+    width: 55px;
+    height: 23.94px;
+    display: flex;
+    align-items: center;
+}
+.sexClass{
+    width: 20px;
+    height: 19.95px;
+    border: 1px solid #D2D2D2;
+}
+.sexFont{
+    width: 30px;
+    height: 23.94px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    
+    font-family: 'Noto Sans CJK KR';
+}
