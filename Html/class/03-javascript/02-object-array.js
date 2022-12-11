@@ -11,15 +11,49 @@ const fruits = [
     {number: 10, title: "귤"},
 ]
 // undefined
-fruits[0].number + " " + fruits[0].title
-// '1 레드향'
-fruits[0].number + " " + fruits[0].title +
-fruits[1].number + " " + fruits[1].title +
-fruits[2].number + " " + fruits[2].title + 
-fruits[3].number + " " + fruits[3].title +
-fruits[4].number + " " + fruits[4].title +
-fruits[5].number + " " + fruits[5].title +
-fruits[6].number + " " + fruits[6].title +
-fruits[7].number + " " + fruits[7].title +
-fruits[8].number + " " + fruits[8].title +
-fruits[9].number + " " + fruits[9].title 
+for (let i = 0; i < fruits.length; i++){
+    console.log(fruits[i].number + " " + fruits[i].title)
+}
+// VM5487:2 1 레드향
+// VM5487:2 2 샤인머스켓
+// VM5487:2 3 산청딸기
+// VM5487:2 4 한라봉
+// VM5487:2 5 사과
+// VM5487:2 6 애플망고
+// VM5487:2 7 딸기
+// VM5487:2 8 천혜향
+// VM5487:2 9 과일선물세트
+// VM5487:2 10 귤
+// undefined
+
+for (let i = 0; i < fruits.length; i++){
+    console.log(`${fruits[i].number} ${fruits[i].title}`)
+}
+// VM5491:2 1 레드향
+// VM5491:2 2 샤인머스켓
+// VM5491:2 3 산청딸기
+// VM5491:2 4 한라봉
+// VM5491:2 5 사과
+// VM5491:2 6 애플망고
+// VM5491:2 7 딸기
+// VM5491:2 8 천혜향
+// VM5491:2 9 과일선물세트
+// VM5491:2 10 귤
+// 백틱, 문자열을 그냥 작성할 수 있다, 단 변수는 반드시 $ {}를 사용해야 한다.
+
+
+for (let i = 0; i < fruits.length; i++){
+    console.log(`과일차트 ${fruits[i].number} 위는 ${fruits[i].title} 입니다.`)
+    console.log("과일차트 " + fruits[i].number +" 위는 "+ fruits[i].title +" 입니다.")
+}
+// VM5495:2 과일차트 1 위는 레드향 입니다.
+// VM5495:2 과일차트 2 위는 샤인머스켓 입니다.
+// VM5495:2 과일차트 3 위는 산청딸기 입니다.
+// VM5495:2 과일차트 4 위는 한라봉 입니다.
+// VM5495:2 과일차트 5 위는 사과 입니다.
+// VM5495:2 과일차트 6 위는 애플망고 입니다.
+// VM5495:2 과일차트 7 위는 딸기 입니다.
+// VM5495:2 과일차트 8 위는 천혜향 입니다.
+// VM5495:2 과일차트 9 위는 과일선물세트 입니다.
+// VM5495:2 과일차트 10 위는 귤 입니다.
+// 백틱, 문자열을 그냥 작성할 수 있다, 단 변수는 반드시 $ {}를 사용해야 한다.
