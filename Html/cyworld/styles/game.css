@@ -54,6 +54,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     padding: 22px 20px 20px 20px;
+    background-color: whitesmoke;
 }
 .game__title{
     font-family: 'Malgun Gothic';
@@ -109,7 +110,6 @@ html, body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 4px;
     margin-top: 10px;
 
 }
@@ -124,6 +124,9 @@ html, body {
     line-height: 13px;
     text-align: center;
     word-spacing: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .lotto__button{

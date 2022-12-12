@@ -3,6 +3,7 @@
 <head>
     <title>Game</title>
     <link href="styles/game.css" rel="stylesheet">
+    <script src="./game.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -22,7 +23,7 @@
             </div>
             <div class="word__text">
                 <input class ="textBox" id="myword" placeholder="단어를 입력하세요.">
-                <button class ="search">확인</button>
+                <button class ="search" onclick= word__game() >확인</button>
             </div>
             <div id = "result" class = "word__result">결과!</div>
         </div>
@@ -31,10 +32,16 @@
             <div class="game__title">LOTTO</div>
             <div class="game__subtitle">버튼을 누르세요.</div>
             <div class="lotto__box">
-                <div class="lotto__text">3 5 10 24 30 34</div>
+                <div class="lotto__text">
+                    <span id = "lotNumber1">3</span>
+                    <span id = "lotNumber2">5</span>
+                    <span id = "lotNumber3">10</span>
+                    <span id = "lotNumber4">24</span>
+                    <span id = "lotNumber5">30</span>
+                    <span id = "lotNumber6">34</span>
+                </div>
             </div>
-            <button class ="lotto__button">Button</button>
-            
+            <button onclick = lotto__game() id = "lotButton" class ="lotto__button">Button</button>
         </div>       
     </div>
 </body>
