@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src = "./07-signup.js"></script>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+<body>
+    ID<input type="text" id="email" oninput= checkValidation()>
+    PW<input type="text" id="pw1" oninput= checkValidation()>
+    PW<input type="text" id="pw2" oninput= checkValidation()>
+    <button id="submit" disabled="true">회원가입</button>
+</body>
+</html>

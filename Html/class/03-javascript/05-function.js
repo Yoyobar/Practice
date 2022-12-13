@@ -1,18 +1,30 @@
-const rand = () => {
-    document.getElementById("number").innerText = String (Math.floor( Math.random() * 1000000)).padStart(6,"0")
+let isStarted = false;
 
+let auth = () => {
+    if(isStarted === false){
+        //타이머 작동중이 아닐때
+        isStarted = true
+        document.getElementById("finish").disabled = false;
+        const token = String(Math.floor(Math.random() * 1000000)).padStart(6,"0");
+        document.getElementById("target").innerText = token;
+        document.getElementById("target").style.color = "#" + token;
+        
+        let time = 10;
+        let timer;
 
-let time = 180
-setInterval(function(){
-    if(time >= 0) {
-        const min = Math.floor(time/60)
-        const sec = String(time % 60).padStart(2, "0")
-        document.getElementById("timer_Min").innerText = min
-        document.getElementById("timer_Sec").innerText = sec
-        time --
+        timer = setInterval(function(){
+            if(time >= 0){
+                let min = Math.floor(time/60)
+                let sec = String(time % 60).padStart(2, "0")
+                document.getElementById("timer").innerText = `${min} : ${sec}`;
+                time--;
+            } else {
+                document.getElementById("finish").disabled = true
+                isStarted = false
+                clearInterval(timer)
+            }
+        },1000)
     } else {
-        document.getElementById("number").innerText = "시간초과"
-        document.getElementById("number").style.color = red;
-        document.getElementById("button").disabled = true;
+        //타이머 작동중일때
     }
-},100)}
+}
