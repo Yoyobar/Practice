@@ -26,4 +26,9 @@
   color: red;
   display: none;
 }
-  
+
+.whit {
+  background : white;
+  width: 500px;
+  display:block;
+}

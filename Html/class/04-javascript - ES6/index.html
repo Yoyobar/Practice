@@ -29,15 +29,31 @@
         </div>
     </div> 
     <button type="button" id="bt" class="btn btn-info">버튼</button>
+    <span class="badge bg-dark" id = "bg-dark">Dark 🔄</span>
 </body>
 <script>
     document.getElementById("bt").addEventListener("click", function(){
         document.querySelector('.black-bg').classList.add('show-modal');
-    });
+    })
     document.querySelector('.btn-danger').addEventListener("click", function(){
         document.querySelector('.black-bg').classList.remove('show-modal');
     })
 
+    
+    
+    let count = 0;
+    if (document.getElementById("bg-dark").addEventListener("click", function(){
+        count++;
+
+        if(count % 2 == 0){
+            document.getElementById("bg-dark").innerHTML = "Dark 🔄";
+            document.getElementById("bg-dark").style.border = ("5px solid black")
+        } else {
+            document.getElementById("bg-dark").innerHTML = "Light 🔄";
+            document.getElementById("bg-dark").style.border = ("5px solid cyan")
+    }}))
+
+    
     /* $('#bt').on('click', function(){
         $('.black-bg').addClass('show-modal');
     }); */
@@ -53,7 +69,7 @@
     })
     */
 
-    // Jquery에서 GetElementByClassName의 단축형 $은 클래스형태에서 버튼의 입출력 작동함
+    /* Jquery에서 GetElementByClassName의 단축형 $은 클래스형태에서 버튼의 입출력 작동함
      $(".btn-primary").on("click", function(){
         if($("#number").val() == "" || $("#number2").val() == "")
         {
@@ -63,6 +79,30 @@
         if($("#number2").val().length < 6){
             alert("좀더 길게")
         }
+
+        
     })
+    */
+    
+    // change, input
+    // change, 포커스를 잃을때
+    // input, 지속적으로
+    /*
+    const score = (type1, type2) => {
+        if (type1 + type2 > 200 || type1 < 0 || type2 < 0){
+            alert("장난 즐")
+        }else if (type1 + type2 >= 120 && type1 > 40 && type2 > 40){
+            console.log("합격")
+            } else console.log("불합격")
+    }
+
+    // 문자열로 변경후 끝자리에 각각 3, 6, 9가 할당이 되는지
+    const sam = (parameter) => {
+        let value = parameter.toString().charAt(parameter.toString().length-1)
+        if(value === "3" || value === "6" || value === "9"){
+            console.log("오")   
+        }
+    }
+    */
 </script>
 </html>
