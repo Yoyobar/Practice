@@ -6,11 +6,24 @@
     background : rgba(0,0,0,0.5);
     z-index : 5;
     padding: 30px;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
   }
-  .white-bg {
+.show-modal {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.white-bg {
     background: white;
     border-radius: 5px;
     padding: 30px;
-    display: none;
-  } 
+} 
+
+.warn {
+  color: red;
+  display: none;
+}
+  

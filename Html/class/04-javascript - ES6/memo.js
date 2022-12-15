@@ -8,4 +8,5 @@ $ = document.getElementsByClassName
 .innerHtml = .html()
 .on = addEventListenr (click, scroll, keydown등)
 .fadeOut, slideUp()등 애니메이션 탑재
+.addClass = classList.add
 */
