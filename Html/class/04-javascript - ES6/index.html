@@ -11,6 +11,15 @@
     <link href="./main.css" rel="stylesheet">
 </head>
 <body>
+    <nav class = "navbar navbar-light bg-light">
+        <div class = "container-fluid">
+            <span id = nav class = "navbar-brand">JSShop</span>
+            <span class = "ms-auto mx3 badge bg-dark">Dark</span>
+            <button class= "navbar-toggler" type= "button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
     <div class="black-bg"> 
         <!-- 시작스타일 종료스타일 -->
         <div class="white-bg">
@@ -30,8 +39,99 @@
     </div> 
     <button type="button" id="bt" class="btn btn-info">버튼</button>
     <span class="badge bg-dark" id = "bg-dark">Dark 🔄</span>
+
+    <div class="main-bg">
+        <h4>Shirt on Sale</h4>
+        <button id="login" class = "btn btn-danger">로그인</button>
+    </div>
+    <div id = alert class = "alert alert-danger">
+        <div id = second></div>초 이내에 사은품 증정!
+    </div>
+    <div style="overflow: hidden">
+        <div class = "slide-container">
+            <div class = "slide-box">
+                <img src="./car1.png">
+            </div>
+            <div class = "slide-box">
+                <img src="./car2.png"">
+            </div>
+            <div class = "slide-box">
+                <img src="./car3.png">
+            </div>
+        </div>
+    </div>
+
+    <button class="before">이전</button>
+    <button class="next">다음</button>
+    <div style="height: 1000px"></div>
+
+    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
+      </div> 
+
 </body>
 <script>
+    window.addEventListener('scroll', function(){
+        let variable = window.scrollY;
+        if(variable > 100) {
+            document.querySelector('.navbar-brand').style.fontSize = '15px';
+        } else document.querySelector('.navbar-brand').style.fontSize = '20px';
+    });
+
+    document.querySelector(".lorem").addEventListener("scroll", function(){
+        let 스크롤양 = document.querySelector(".lorem").scrollTop;
+        let div박스크기 = document.querySelector(".lorem").clientHeight;
+        let 실제높이 = document.querySelector(".lorem").scrollHeight;
+        if((스크롤양+ div박스크기) - 실제높이 > -10){
+            alert("굿")
+        }
+
+    })
+
+    let picture = 0;
+    let limit = 3;
+    let alt = 0;
+    $(".next").on("click", function(){
+        alt -= 100;
+        $(".slide-container").css("transform", "translateX(" +alt+ "vw)");
+        picture ++;
+
+        if(picture === limit){
+            picture = 0;
+            alt = 0;
+            $(".slide-container").css("transform", "translateX(" +alt+ "vw)");
+        }
+    })
+    $(".before").on("click", function(){
+        alt += 100;
+        $(".slide-container").css("transform", "translateX(" +alt+ "vw)");
+        picture --;
+        
+        if (picture === -1){
+            alt = 0;
+            picture = 0;
+            $(".slide-container").css("transform", "translateX(" +alt+ "vw)");
+        }
+    })
+
+
+
+    
+    <!-- 다음버튼 누르면 vw의 값을 계산해서 다음사진으로 넘어가게 보여줘라 -->
+
+
+
+    document.getElementById("second").innerText = 5;
+    setInterval(function(){
+        if(document.getElementById("second").innerText != 0){
+            document.getElementById("second").innerText -= 1;
+        }
+        if(document.getElementById("second").innerText == 0){
+            document.getElementById("alert").style.display = "none";
+        }
+    }, 1000);
+
+
     document.getElementById("bt").addEventListener("click", function(){
         document.querySelector('.black-bg').classList.add('show-modal');
     })
@@ -54,20 +154,29 @@
     }}))
 
     
-    /* $('#bt').on('click', function(){
+     $('#bt').on('click', function(){
         $('.black-bg').addClass('show-modal');
-    }); */
+    }); 
 
     // JS6에서 GetElementByClassName은 클래스형 자료에서 버튼의 입출력 작동하지않음
 
-    /*
+    
     document.getElementById("primary").addEventListener("click", function(){
         if(document.getElementById("number").value == "" || document.getElementById("number2").value == "")
         {
             alert("좀 채워라");
         }
+        if($("#number2").val().length < 6){
+            alert("좀더 길게")
+        }
+        if(/[A-Z]/.test($("#number2").val()) === false){
+            alert("대문자 추가")
+        }
     })
-    */
+
+
+
+    
 
     /* Jquery에서 GetElementByClassName의 단축형 $은 클래스형태에서 버튼의 입출력 작동함
      $(".btn-primary").on("click", function(){

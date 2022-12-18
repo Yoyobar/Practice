@@ -1,4 +1,29 @@
 /* 그냥 공백쓰면 클래스 하나 더 가능 */
+
+.navbar {
+  position: fixed; 
+  /* 상단 고정 */
+  width: 100%;
+  z-index: 5;
+}
+.navbar-brand{
+  font-size: 20px;
+  transition: all 0.5s;
+}
+.alert{
+  display: flex;
+}
+.slide-container{
+  width: 300vw;
+  transition: all 1s;
+}
+.slide-box{
+  width: 100vw;
+  float: left;
+}
+.slide-box img{
+  width: 100%;
+}
 .black-bg {
     width : 100%;
     height : 100%;
