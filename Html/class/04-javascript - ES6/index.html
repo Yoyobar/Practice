@@ -72,7 +72,7 @@
 </body>
 <script>
     window.addEventListener('scroll', function(){
-        let variable = window.scrollY;
+     variable = window.scrollY;
         if(variable > 100) {
             document.querySelector('.navbar-brand').style.fontSize = '15px';
         } else document.querySelector('.navbar-brand').style.fontSize = '20px';
@@ -137,6 +137,16 @@
     })
     document.querySelector('.btn-danger').addEventListener("click", function(){
         document.querySelector('.black-bg').classList.remove('show-modal');
+    })
+    document.querySelector('.black-bg').addEventListener("click", function(e){
+        if (e.target == this){
+            document.querySelector('.black-bg').classList.remove('show-modal');
+
+            e.target //유저가 실제로 누른 것
+            e.currentTarget //이벤트 리스너 달린 곳, this;
+            e.preventDefault(); // 클릭 안한것처럼 동작
+            e.stopPropagation(); // 이벤트 버블링 중단
+    }
     })
 
     
