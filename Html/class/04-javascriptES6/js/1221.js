@@ -1,7 +1,7 @@
 // 아래 코드에서 alert는 실행될까요?
 
 if ('0') {
-  alert('Hello');
+	alert('Hello');
 }
 
 // 문자열 0이므로 실제로 값이 있는걸로 판단, 출력됨
@@ -10,9 +10,9 @@ if ('0') {
 // 사용자가 'ECMAScript’를 입력했다면 ‘정답입니다!’, 아니라면 '모르셨나요? 정답은 ECMAScript입니다!'라는 메시지를 보여주세요.
 let question = prompt("자바스크립트의 '공식' 이름은 무엇일까요?", '');
 if (question === 'ECMAScript') {
-  alert('정답입니다!');
+	alert('정답입니다!');
 } else {
-  alert('모르셨나요? 정답은 ECMAScript입니다!');
+	alert('모르셨나요? 정답은 ECMAScript입니다!');
 }
 
 // if..else와 프롬프트 대화상자를 사용해 사용자로부터 숫자 하나를 입력받고, 아래 조건에 따라 그 결과를 alert 창에 출력해 보세요.
@@ -22,11 +22,11 @@ if (question === 'ECMAScript') {
 
 let inputNumber = prompt('숫자를 입력하세요', '');
 if (inputNumber > 0) {
-  alert(1);
+	alert(1);
 } else if (inputNumber < 0) {
-  alert(-1);
+	alert(-1);
 } else {
-  alert(0);
+	alert(0);
 }
 
 // 조건부 연산자 '?'를 이용해 if문이 사용된 아래 코드를 변형해보세요. 동작 결과는 동일해야 합니다.
@@ -58,12 +58,12 @@ let result = a + b < 4 ? '미만' : '이상';
 
 let message;
 login == '직원'
-  ? '안녕하세요'
-  : login == '임원'
-  ? '환영합니다'
-  : login == ''
-  ? '로그인이 필요합니다.'
-  : '';
+	? '안녕하세요'
+	: login == '임원'
+	? '환영합니다'
+	: login == ''
+	? '로그인이 필요합니다.'
+	: '';
 
 // 아래 코드의 결과를 예측해 보세요.
 alert(null || 2 || undefined);
@@ -88,9 +88,9 @@ alert(null || (2 && 3) || 4);
 // "이상과 이하"는 age(나이) 범위에 14나 90이 포함된다는 의미입니다.
 let isAge;
 if (isAge > 14 && isAge < 90) {
-  alert('14세 이상 90세 이하 입니다.');
+	alert('14세 이상 90세 이하 입니다.');
 } else {
-  alert('14세 이상 90세 이하가 아닙니다.');
+	alert('14세 이상 90세 이하가 아닙니다.');
 }
 
 // age(나이)가 14세 이상 90세 이하에 속하지 않는지를 확인하는 if문을 작성하세요.
@@ -98,11 +98,11 @@ if (isAge > 14 && isAge < 90) {
 
 let age;
 if (age < 14 || age > 90) {
-  true;
+	true;
 }
 false;
 if (!(age >= 14 && age <= 90)) {
-  true;
+	true;
 }
 false;
 
@@ -124,27 +124,27 @@ if (null || (-1 && 1)) alert('third'); //-1 && 1 = 1  null || 1; true, 'third'
 // 빈 문자열을 입력하거나 입력을 취소했다면 "취소되었습니다."라는 메시지를 보여주세요.
 // 순서도는 다음과 같습니다.
 const passwordSys = () => {
-  let isWho = prompt('', '');
+	let isWho = prompt('', '');
 
-  if (isWho === 'Admin') {
-    let passCheck = prompt('비밀번호', '');
+	if (isWho === 'Admin') {
+		let passCheck = prompt('비밀번호', '');
 
-    if (passCheck === '' || passCheck === null) {
-      alert('취소되었습니다.');
-      return;
-    }
+		if (passCheck === '' || passCheck === null) {
+			alert('취소되었습니다.');
+			return;
+		}
 
-    if (passCheck === 'TheMaster') {
-      alert('환영합니다!');
-    } else {
-      alert('인증에 실패하였습니다.');
-    }
-  }
+		if (passCheck === 'TheMaster') {
+			alert('환영합니다!');
+		} else {
+			alert('인증에 실패하였습니다.');
+		}
+	}
 
-  if (isWho === '' || isWho === null) {
-    alert('취소되었습니다.');
-    return;
-  }
+	if (isWho === '' || isWho === null) {
+		alert('취소되었습니다.');
+		return;
+	}
 };
 
 passwordSys();
@@ -168,20 +168,20 @@ passwordSys();
 // }
 
 const browser = (browser) => {
-  if (browser === 'Edge') {
-    alert('Edge를 사용하고 계시네요!');
-    return;
-  }
+	if (browser === 'Edge') {
+		alert('Edge를 사용하고 계시네요!');
+		return;
+	}
 
-  if (
-    browser === 'FireFox' ||
-    browser === 'Chrome' ||
-    browser === 'Safari' ||
-    browser === 'Opera'
-  ) {
-    alert('저희 서비스가 지원하는 브라우저를 사용하고 계시네요');
-  }
-  alert('현재 페이지가 괜찮아 보이길 바랍니다!');
+	if (
+		browser === 'FireFox' ||
+		browser === 'Chrome' ||
+		browser === 'Safari' ||
+		browser === 'Opera'
+	) {
+		alert('저희 서비스가 지원하는 브라우저를 사용하고 계시네요');
+	}
+	alert('현재 페이지가 괜찮아 보이길 바랍니다!');
 };
 
 browser('Edge');
@@ -204,18 +204,18 @@ browser('Edge');
 let a = +prompt('a?', '');
 
 switch (a) {
-  case 0:
-    alert(0);
-    break;
+	case 0:
+		alert(0);
+		break;
 
-  case 1:
-    alert(1);
-    break;
+	case 1:
+		alert(1);
+		break;
 
-  case 2:
-  case 3:
-    alert('2,3');
-    break;
+	case 2:
+	case 3:
+		alert('2,3');
+		break;
 }
 
 //for 키이름 In 객체 : 객체의 키들을 순서대로 실행
@@ -224,7 +224,7 @@ switch (a) {
 // 아래 코드를 실행했을 때 얼럿 창에 마지막으로 뜨는 값은 무엇일까요? 이유도 함께 설명해보세요.
 let i = 3;
 while (i) {
-  alert(i--);
+	alert(i--);
 }
 
 // i가 Falsy가 되면 정지되는 반복문, 3,2,1 즉 1이 출력된다.
@@ -258,25 +258,25 @@ for (let i = 0; i < 5; ++i) alert(i);
 // for 반복문을 이용하여 2부터 10까지 숫자 중 짝수만을 출력해보세요.
 
 for (let j = 1; j <= 10; j++) {
-  j % 2 || alert(j);
+	j % 2 || alert(j);
 }
 
 let i = 1;
 while (i < 11) {
-  i % 2 || alert(i);
-  i++;
+	i % 2 || alert(i);
+	i++;
 }
 
 for (let k = 1; k <= 10; k++) {
-  if (!(k % 2)) alert(k);
+	if (!(k % 2)) alert(k);
 }
 
 // for 반복문을 while 반복문으로 바꾸되, 동작 방식에는 변화가 없도록 해보세요. 출력 결과도 동일해야 합니다.
 for (let i = 0; i < 3; i++) {
-  alert(`number ${i}!`);
+	alert(`number ${i}!`);
 }
 //0,1,2;
 let i = 0;
 while (i < 3) {
-  alert(`number ${i++}!`);
+	alert(`number ${i++}!`);
 }
