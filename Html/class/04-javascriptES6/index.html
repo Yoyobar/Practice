@@ -44,8 +44,8 @@
 				display: none;
 				padding: 10px;
 			}
-			.show {
-				display: block;
+			.form-hide {
+				display: none;
 			}
 		</style>
 		<div class="container mt-3">
@@ -53,6 +53,23 @@
 				<span class="car-title">상품명</span>
 				<span class="car-price"></span>
 			</div>
+			<form class="container my-5 form-group">
+				<p>상품선택</p>
+				<select class="form-select mt-2">
+					<option>모자</option>
+					<option>셔츠</option>
+					<option>바지</option>
+				</select>
+				<select class="form-select mt-2 form-hide">
+					<option selected disabled>사이즈 선택...</option>
+					<option>130</option>
+					<option>120</option>
+					<option>110</option>
+					<option>100</option>
+					<option>90</option>
+				</select>
+				<div id="test"></div>
+			</form>
 		</div>
 		<div class="container mt-5">
 			<ul class="list">
