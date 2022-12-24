@@ -8,6 +8,11 @@
 			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
 			crossorigin="anonymous"
 		/>
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<div class="card-group container">
@@ -49,6 +54,28 @@
 				document.querySelectorAll('.card-title')[i].innerHTML = products[i].title;
 				document.querySelectorAll('.card-price')[i].innerHTML = `가격 : ${products[i].price}`;
 			}
+			// Ajax 요청 하는법
+			// $.get('text')
+			// 	.done(function(data){
+			// 		console.log(data)
+			// 	})
+			// 	.fail(function(){
+			// 		console.log('실패함'')
+			// 	})
+			// 	제이쿼리 방식
+			// 		$.get('https://codingapple1.github.io/price.json').done(function (data) {
+			// 			console.log(data);
+			// 		});
+
+			// 		fetch('https://codingapple1.github.io/price.json')
+			// 			.then((res) => res.json()) //받아온 json을 obj로 변경
+			// 			.then((data) => {
+			// 				console.log(data.price);
+			// 			})
+			// 			.catch((error) => {
+			// 				console.log(error);
+			// 			});
+			//
 		</script>
 	</body>
 </html>

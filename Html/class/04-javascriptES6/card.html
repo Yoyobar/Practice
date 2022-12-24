@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>Document</title>
+		<link href="./card.css" rel="stylesheet" />
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div>
+			<div class="card-background">
+				<div class="card-box">
+					<img src="./img/card1.png" />
+				</div>
+				<div class="card-box">
+					<img src="./img/card2.png" />
+				</div>
+				<div class="card-box">
+					<img src="./img/card3.png" />
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		$(window).scroll(function () {
+			let 높이 = $(window).scrollTop();
+			console.log(높이);
+
+			//650~1150 opacity 1~0
+			let y = (-1 / 500) * 높이 + 115 / 50;
+			// 1 = a * 650 + b;
+			// 0 = a * 1150 + b;
+			let z = (-1 / 5000) * 높이 + 565 / 500;
+
+			$('.card-box').eq(0).css('opacity', y);
+			$('.card-box').eq(0).css('transform', `scale( ${z} )`);
+		});
+	</script>
+</html>
