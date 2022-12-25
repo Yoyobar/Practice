@@ -1,6 +1,5 @@
 .slide-container {
 	width: 300vw;
-	transition: all 500ms;
 	display: flex;
 }
 .slide-box {
@@ -9,4 +8,8 @@
 }
 .slide-box img {
 	width: 100%;
+}
+
+.anim {
+	transition: all 1s;
 }

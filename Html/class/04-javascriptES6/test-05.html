@@ -1,0 +1,108 @@
+<!-- TodoList for Practice -->
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet" />
+		<title>To-do-List</title>
+		<style>
+			.shake {
+				animation: shake 1s ease-in-out infinite;
+			}
+			@keyframes shake {
+				0% {
+					transform: rotate(-2deg);
+				}
+				50% {
+					transform: rotate(2deg);
+				}
+				100% {
+					transform: rotate(-2deg);
+				}
+			}
+			#todo-list {
+				width: 800px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title text-white rounded-2xl text-4xl text-center mt-14 mx-auto w-96 bg-blue-500">TOY PROJECT FOR TODO-LIST</div>
+		<button id="btn1" class="hover:bg-blue-700 mt-3 ml-5 add w-32 h-9 bg-blue-500 rounded-full">
+			<div class="text-center text-white text-2xl">ADD</div>
+		</button>
+		<ul id="todo-list" class="todo btnStatement"></ul>
+		<div class="border-2 add-box hidden shadow-inner alert-box bg-gray-100 w-1/3 h-96 mx-auto rounded-2xl border-t-8 border-blue-500">
+			<div class="h-7 flex justify-end">
+				<div class="float-right ml-1 w-4 mt-1 h-4 bg-red-400 rounded-full"></div>
+				<div class="float-right ml-1 w-4 mt-1 h-4 bg-yellow-400 rounded-full"></div>
+				<div class="float-right ml-1 mr-1 w-4 mt-1 h-4 bg-green-400 rounded-full"></div>
+			</div>
+			<div class="h-80 flex items-center justify-center">
+				<div class="h-3/4 w-3/4 flex-col items-center text-center text-xl pt-10">
+					<div>원하시는 PLAN을 입력해주세요.</div>
+					<input id="text" class="text-lg text-center rounded-xl mt-3 w-3/4 h-1/2" />
+				</div>
+			</div>
+			<div class="h-8 flex justify-center">
+				<button id="btn2" class="hover:bg-green-700 text-white rounded-full mr-28 bg-green-500 w-20 h-6">확인</button>
+				<button id="btnCancel" class="text-white rounded-full w-20 h-6 bg-red-500 hover:bg-red-700">취소</button>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		const btn1 = document.getElementById('btn1');
+		const btn2 = document.getElementById('btn2');
+		const btn3 = document.getElementById('btnCancel');
+
+		const textBox = document.getElementById('text');
+		const todoBox = document.querySelector('.add-box');
+		const todoRow = document.querySelectorAll('.row');
+
+		const statement = document.querySelectorAll('.todo');
+		const btnStatement = document.querySelectorAll('.btnStatement');
+
+		const log = console.log;
+		let page = 1;
+
+		btn1.addEventListener('click', () => {
+			if (!todoBox.classList.contains('hidden')) {
+				return alert('입력 해주세요');
+			}
+
+			todoBox.classList.add('shake');
+			setTimeout(() => {
+				todoBox.classList.remove('shake');
+			}, 750);
+			todoBox.classList.remove('hidden');
+		});
+
+		btn2.addEventListener('click', () => {
+			if (textBox.value == '') {
+				return alert('값을 입력해주세요.');
+			} else if (textBox.value.length > 80) {
+				return alert('글자수는 80자 이하로 제한 됩니다.');
+			}
+
+			const rowData = `
+			<li id='${page}'class="todo pl-2 ml-4 mx-auto bg-gray-100 mt-1 rounded-md h-12 border-2 flex items-center w-fit justify-end float-left">${textBox.value}
+			<div class="text-4xl text-gray-300 mb-1">|</div>
+			</li>`;
+			document.getElementById('todo-list').insertAdjacentHTML('beforeend', rowData);
+			textBox.value = '';
+			todoBox.classList.add('hidden');
+			page++;
+		});
+		btn3.addEventListener('click', () => {
+			todoBox.classList.add('hidden');
+			textBox.value = '';
+		});
+		for (const button of btnStatement) {
+			button.addEventListener('click', function () {
+				// Remove the parent li element
+
+				this.firstChild.remove();
+			});
+		}
+	</script>
+</html>
