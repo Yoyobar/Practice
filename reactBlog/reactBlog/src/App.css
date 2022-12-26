@@ -1,0 +1,40 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+div {
+	box-sizing: border-box;
+	line-height: 40px;
+}
+
+.changeTitle {
+	width: 52px;
+	height: 16px;
+	background-color: slategray;
+	border: 1px solid black;
+	color: white;
+	margin-left: 10px;
+}
+.black-nav {
+	display: flex;
+	background-color: black;
+	width: 100%;
+	color: white;
+	padding-left: 20px;
+	height: 60px;
+	align-items: center;
+}
+
+.list {
+	padding-left: 20px;
+	text-align: left;
+	border-bottom: 1px solid grey;
+	margin-top: 20px;
+}
+
+.modal {
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #eee;
+	text-align: left;
+}
