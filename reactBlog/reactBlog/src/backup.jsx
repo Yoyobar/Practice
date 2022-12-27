@@ -21,29 +21,11 @@ function App() {
 		'강남 우동맛집',
 		'파이썬독학',
 	]);
-	let [입력값, 입력값변경] = useState('');
-	let [modalName, setName] = useState('React');
-
-	const date = () => {
-		let today = new Date();
-		let month = ('0' + (today.getMonth() + 1)).slice(-2);
-		let day = ('0' + today.getDate()).slice(-2);
-		let hours = ('0' + today.getHours()).slice(-2);
-		let minutes = ('0' + today.getMinutes()).slice(-2);
-		let dateString = `_${month}-${day} ${hours}:${minutes}`;
-		return dateString;
-	};
-
-	const changeTitle = () => {
-		let copy = [...title];
-		copy[0] = '여자코트 추천';
-		타이틀변경(copy);
-	};
-	const modalTitle = (number) => {
-		let copy = title[number];
-		return setName(copy);
-	};
-
+	// const changeTitle = () => {
+	// 	let copy = [...title];
+	// 	copy[0] = '여자코트 추천';
+	// 	타이틀변경(copy);
+	// };
 	// const changeTitlenum = () => {
 	// 	let copy = [...title];
 	// 	copy.sort();
@@ -57,7 +39,7 @@ function App() {
 		return setModal(true);
 	};
 
-	let [like, 따봉변경] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0]);
+	let [like, 따봉변경] = useState([0, 0, 0]);
 	const liked = (page) => {
 		// *** 배열을 복사해서, 들어오는 Key값에 값을 할당한후, 그대로 그 변수를 할당한다!! 이게 차이점
 		// 미리계산 안하고 가져가서 계산하면 반영이 안됨
@@ -65,19 +47,6 @@ function App() {
 		copy[page] += 1;
 		따봉변경(copy);
 	};
-	const deleted = (page) => {
-		let copy = [...title];
-		copy.splice(page, 1);
-		return 타이틀변경(copy);
-	};
-
-	const send = (message) => {
-		let copy = [...title];
-		if (message == '') return alert('내용을 입력하셔야죠');
-		copy.push(message);
-		return 타이틀변경(copy);
-	};
-
 	//React syntax
 	//let [a , b] = useState(초기 값), a(변수 명), b(상태 변환 '함수'), 따라서 상태를 바꾸고싶으면 함수를 하나 선언한다.
 	//const test = () => {
@@ -100,20 +69,16 @@ function App() {
 				>
 					{blog}
 				</h4>
-				<div>{date()}</div>
 			</div>
+			{modal === false ? null : <Modal></Modal>}
 
 			{title.map(function (a, i) {
 				return (
 					<div className="list" key={i}>
-						<h4
-							onClick={() => {
-								modalTitle(i);
-							}}
-						>
+						<h4>
 							{title[i] /* a도됨 */}
 							<span
-								className="taB"
+								className="tabong"
 								onClick={function () {
 									liked(i);
 								}}
@@ -121,42 +86,11 @@ function App() {
 								👍
 								{like[i]}
 							</span>
-							<span
-								onClick={() => {
-									deleted(i);
-								}}
-								className="margin"
-							>
-								❌
-							</span>
 						</h4>
 						<p>{subtitle[0]}</p>
 					</div>
 				);
 			})}
-			<input
-				className="inputbox1"
-				onChange={(e) => {
-					입력값변경(e.target.value);
-					//인풋태그에 있는 값을 보내주고싶으면 변수e 추가
-				}} //e.target(목표)
-				type="text"
-			></input>
-			<button
-				onClick={() => {
-					send(입력값);
-					document.querySelector('.inputbox1').value = '';
-				}}
-			>
-				게시
-			</button>
-			{modal === false ? null : (
-				<Modal
-					color={'skyblue'}
-					modalName={modalName}
-					changeTitle={changeTitle}
-				/>
-			)}
 		</div>
 		//동적 UI Step Tip::
 		//1. html, css로 미리 디자인 작성
@@ -169,17 +103,12 @@ function App() {
 //1.반복적인 html 축약, 2.큰 페이지 하나, 3.자주 변경되는 UI
 //다른 컴포넌트에 state의 변수를 가져다쓸때 사용하지 못함. 그래서 너무 막쓰면 안됨
 //function, return(), div는 끝에 하나! <></>로도 가능함
-const Modal = (props) => {
-	//prop, 자식 컴포넌트 사용법
-	//1. <자식 컴포넌트 작명 = {state 이름}>
-	//2. props 매개변수 등록후 props.작명 사용, 보통 기존 state의 이름 사용
-	// props.xxx로 스타일, 함수, 텍스트등을 보낼수도 잇음
+const Modal = () => {
 	return (
-		<div className="modal" style={{ background: props.color }}>
-			<h4>{props.modalName}</h4>
+		<div className="modal">
+			<h4>제목</h4>
 			<p>날짜</p>
 			<p>상세내용</p>
-			<button>글수정</button>
 		</div>
 	);
 };
@@ -188,18 +117,3 @@ export default App;
 // 자료보관은 변수, state
 // 스타일은 {{Array}}
 //
-
-// return (
-// 	<div className="modal" style={{ background: props.color }}>
-// 		<h4>{props.title[0]}</h4>
-// 		<p>날짜</p>
-// 		<p>상세내용</p>
-// 		<button
-// 			onClick={() => {
-// 				props.changeTitle(); //이쪽에만 함수처럼 써야됨!
-// 			}}
-// 		>
-// 			글수정
-// 		</button>
-// 	</div>
-// );
