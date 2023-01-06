@@ -1,0 +1,34 @@
+* {
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 800px;
+	height: 800px;
+}
+.header {
+	width: 100%;
+	height: 50px;
+	background: aquamarine;
+}
+.left-menu {
+	width: 20%;
+	height: 400px;
+	background: cornflowerblue;
+	/* display: inline-block; */
+	float: left;
+}
+.right-menu {
+	width: 80%;
+	height: 400px;
+	background: coral;
+	/* display: inline-block; */
+	float: right;
+}
+.footer {
+	width: 100%;
+	height: 100px;
+	background-color: gray;
+	clear: both;
+}

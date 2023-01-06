@@ -1,0 +1,41 @@
+.wrapper {
+	width: 24rem;
+	height: 24rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.profile {
+	width: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	transition: all 1s;
+}
+.profile:hover {
+	width: 150px;
+	transition: all 1s;
+}
+.main___name {
+	font-size: 2rem;
+	font-weight: 700;
+}
+.sub___name {
+	font-size: 1rem;
+	padding-bottom: 1rem;
+}
+.sub___box {
+	background-color: cornflowerblue;
+	color: white;
+	margin: 0rem 2rem;
+	padding: 1rem 0rem;
+	border-radius: 1rem;
+	box-shadow: 4px 4px 0px 0px darkblue;
+	transition: all 1s;
+}
+.sub___box:hover {
+	transition: all 2s;
+	background-color: darkblue;
+	box-shadow: 4px 4px 0px 0px #0000000;
+}

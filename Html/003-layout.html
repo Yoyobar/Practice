@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<link href="./003-layout.css" rel="stylesheet" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				<div class="title-logo">
+					<img src="./logo.png" />
+					<div style="margin-left: 0.4rem; margin-top: 0.4rem">
+						<p>아우리</p>
+						<p class="time">1시간 전</p>
+					</div>
+				</div>
+
+				<div style="margin-bottom: 1rem">
+					<h3>4k빔프로젝터 가성비 최강으로 선택했어요</h3>
+				</div>
+				<div>
+					<p class="document">
+						4k빔프로젝터 가성비최강으로 선택했어요 날씨가날씨인지라 요즘 마음이
+						싱숭생숭한게 가을타는 사람이 아닌 봄을 타고있었어요... 하루하루
+						시간이 무의미하게 흘러가는거같고 재미있는걸 찾지못해 이리저리
+						헤메는사람처럼 즐거운걸 못찾고있...
+					</p>
+					<button class="btn">Share</button>
+				</div>
+				<div class="title-icon"></div>
+			</div>
+			<div class="image-box"><img src="./document-logo.png" /></div>
+		</div>
+	</body>
+	<script>
+		document.querySelector('.btn').addEventListener('click', () => {
+			let lest = confirm('THIS IS TEST');
+			lest == 0 ? alert(false) : alert(true);
+		});
+	</script>
+</html>

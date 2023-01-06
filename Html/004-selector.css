@@ -1,0 +1,35 @@
+ul {
+	background-color: beige;
+	width: 27rem;
+	border-radius: 3px;
+}
+
+.navbar > li {
+	/* spacebar 사용시 ~~ 안에 있는 */
+	/* >사용시 ~~ 직계 자식만 */
+	display: inline-block;
+	background-color: royalblue;
+	margin: 1rem 1rem;
+	padding: 1rem;
+	border-radius: 15px;
+	transition: all 0.3s;
+}
+
+.navbar > li:hover {
+	/* spacebar 사용시 ~~ 안에 있는 */
+	/* >사용시 ~~ 직계 자식만 */
+	background-color: darkslateblue;
+	transition: all 0.3s;
+}
+
+.navbar > li > a {
+	font-size: 16px;
+	text-decoration: none;
+	color: white;
+	/* 직계 자식에게 적용 */
+	/* decoration : link 색변경 제거 */
+}
+
+.navbar > li > a:visited {
+	color: white;
+}

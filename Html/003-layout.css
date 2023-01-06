@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+}
+
+.container {
+	width: 48rem;
+	height: 12rem;
+	margin-left: 1rem;
+	border-bottom: 1px solid gainsboro;
+}
+.title {
+	float: left;
+	width: 80%;
+	height: 100%;
+}
+.title-logo {
+	display: flex;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+.image-box {
+	float: right;
+	width: 20%;
+	height: 80%;
+	margin-top: 1rem;
+	transition: all 1s;
+}
+.time {
+	color: gray;
+	font-size: 0.8rem;
+}
+.document {
+	color: gray;
+	font-size: 0.9rem;
+	font-weight: 200;
+}
+.btn {
+	background-color: cornflowerblue;
+	float: right;
+	margin-right: 1rem;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	transition: all 0.5s;
+}
+.btn:hover {
+	background-color: darkslateblue;
+	cursor: pointer;
+	transition: all 0.5s;
+}
