@@ -1,0 +1,193 @@
+* {
+	margin: 0px;
+	box-sizing: border-box;
+}
+.main-background {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	background-image: url(./img/shoes.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 1px;
+	/* 배경으로 이미지 */
+}
+.main-background > h4 {
+	color: white;
+	font-size: 3rem;
+	margin-top: 100px;
+	text-align: center;
+	width: 100%;
+}
+.main-background > p {
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 200;
+	margin-top: 2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	width: 100%;
+}
+.main-background > button:hover {
+	filter: brightness(70%);
+}
+.btn-primary {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background-color: cornflowerblue;
+	margin-right: 1rem;
+	border: 0rem;
+	border-radius: 0.2rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	color: white;
+	transition: all 0.5s;
+}
+.btn-secondary {
+	position: absolute;
+	bottom: 20px;
+	right: 8rem;
+	margin-left: 1rem;
+	background-color: gray;
+	border: 0rem;
+	border-radius: 0.2rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	color: white;
+	transition: all 0.5s;
+}
+
+.main-background form input[type='text'] {
+	padding: 10px;
+	font-size: 20px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+/* margin collpse 현상 조심, 테두리가 겹칠경우 같이 움직임 */
+/* 1.좌표 이동가능 */
+
+.sub-background {
+	position: relative;
+	top: 2rem;
+	margin: auto;
+	text-align: center;
+	width: 70%;
+	max-width: 600px;
+	background-color: ghostwhite;
+	border-radius: 0.5rem;
+	padding: 20px;
+	z-index: 5;
+}
+.sub-background > h4 {
+	margin-bottom: 1rem;
+}
+.contact {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333333;
+	z-index: 10;
+	display: flex;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.contact-box {
+	margin: auto;
+	background-color: white;
+	width: 100%;
+	max-width: 25rem;
+	height: 100%;
+	max-height: 30rem;
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+}
+.contact-box > p {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.box-email {
+	width: 100%;
+	padding-top: 2rem;
+}
+.box-email > input {
+	width: 100%;
+	height: 2.5rem;
+	border: 1px solid #cccccc;
+	border-radius: 0.2rem;
+}
+.box-email > input::placeholder {
+	color: #cccccc;
+	padding-left: 1rem;
+}
+.box-name {
+	padding-top: 1rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.box-name > div > input {
+	width: 100%;
+	height: 2.5rem;
+	border: 1px solid #cccccc;
+	border-radius: 0.2rem;
+}
+.box-message {
+	padding-top: 1rem;
+	width: 100%;
+}
+.box-message > input {
+	width: 100%;
+	height: 8rem;
+	border: 1px solid #cccccc;
+	border-radius: 0.2rem;
+}
+.box-footer {
+	padding-top: 1rem;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.box-footer > div {
+	display: flex;
+}
+.box-footer > div > div {
+	margin-left: 0.3rem;
+}
+.box-footer > button {
+	width: 8rem;
+	height: 2rem;
+	color: white;
+	background-color: gold;
+	border-radius: 0.4rem;
+	border: 0;
+	transition: all 0.5s;
+	font-size: 1.2rem;
+}
+.box-footer > button:hover {
+	background-color: goldenrod;
+	font-size: 1.5rem;
+	transition: all 0.5s;
+}
+input[id='cb1'] {
+	display: none;
+}
+input[id='cb1'] + label {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border-radius: 3px;
+	background-color: #cccccc;
+	transition: all 0.5s;
+}
+input[id='cb1']:checked + label {
+	background-color: cornflowerblue;
+	transition: all 0.5s;
+}

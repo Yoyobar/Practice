@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="./005-layout.css" rel="stylesheet" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="main-background">
+			<h4>Buy Our Shoes!</h4>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cum,<br />
+				molestiae repudiandae ea rem odio ipsa minus reprehenderit nesciunt<br />
+				doloremque, nulla impedit deleniti magni sunt facilis sequi esse
+				placeat<br />
+				error.
+			</p>
+			<button
+				onclick="window.open('http://www.google.com')"
+				class="btn-primary"
+			>
+				Visit site
+			</button>
+			<button class="btn-secondary">More</button>
+			<div class="sub-background">
+				<h4>How we design our shoes</h4>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+					alias<br />
+					quas error nisi culpa inventore quam ratione, quibusdam voluptatem,<br />
+					mollitia repellendus numquam, tempora eaque quasi soluta voluptatum<br />
+					voluptates aspernatur corruption.
+				</p>
+			</div>
+		</div>
+		<div class="contact">
+			<div class="contact-box">
+				<p>contact us</p>
+				<div class="box-email">
+					<div>Your Email</div>
+					<input type="email" placeholder="email@example.com" />
+				</div>
+				<div class="box-name">
+					<div>
+						<div>First name</div>
+						<input />
+					</div>
+					<div>
+						<div>Last name</div>
+						<input />
+					</div>
+				</div>
+				<div class="box-message">
+					<div>Message</div>
+					<input />
+				</div>
+				<div class="box-footer">
+					<div>
+						<input type="checkbox" id="cb1" />
+						<label for="cb1"></label>
+						<label style="margin-left: 5px" for="cb1">Subscribe</label>
+					</div>
+					<button class="submit" type="submit">SEND</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		document.querySelector('.btn-secondary').addEventListener('click', () => {
+			document.querySelector('.contact').style.visibility = 'visible';
+			document.querySelector('.contact').style.opacity = '1';
+		});
+		document.querySelector('.submit').addEventListener('click', () => {
+			document.querySelector('.contact').style.visibility = 'hidden';
+			document.querySelector('.contact').style.opacity = '0';
+		});
+	</script>
+</html>
