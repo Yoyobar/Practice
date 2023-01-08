@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	border-collapse: collapse;
+}
+.cart-main {
+	width: 100%;
+	padding: 4rem;
+}
+
+.cart-background {
+	width: 48rem;
+	background-color: #c2d3de;
+	padding: 30px;
+	margin: auto;
+}
+.cart-background > h3 {
+	color: #1e4068;
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+
+.cart-table td,
+.cart-table th {
+	padding: 15px;
+	border-bottom: 2px solid #c2d3de;
+}
+
+.cart-table {
+	width: 100%;
+	max-width: 700px;
+	background-color: white;
+	border-radius: 10px;
+}
+.cart-table th {
+	font-weight: 600;
+	font-family: Arial;
+	color: #b2ccd6;
+	text-align: right;
+	letter-spacing: 1px;
+}
+.cart-table th:nth-child(2) {
+	/* th인데 2번째, nth-child */
+	width: 240px;
+	text-align: left;
+}
+.cart-table td:nth-child(2) > div:nth-child(1) {
+	font-size: 1.2rem;
+	font-weight: 700;
+	font-family: Impact;
+}
+.cart-table td:nth-child(2) > div:nth-child(2) {
+	color: #c2d3de;
+	font-weight: bold;
+}
+.cart-table td:nth-child(3),
+.cart-table td:nth-child(4) {
+	color: #c2d3de;
+	text-align: right;
+}
+
+.cart-table td:nth-child(5) {
+	text-align: right;
+	font-weight: bold;
+	color: #1e4068;
+}
+.cart-table tr:nth-child(3) > td:nth-child(1) {
+	text-align: right;
+	font-weight: bold;
+	color: #1e4068;
+	font-size: 1.2rem;
+}
+.cart-footer {
+	margin-top: 1rem;
+	max-width: 700px;
+	display: flex;
+	justify-content: space-between;
+}
+.cart-footer > div:nth-child(1) {
+	text-decoration: underline;
+	color: #1e4068;
+}
+.cart-footer > button {
+	color: white;
+	padding: 1rem;
+	background-color: #1e4068;
+	border: 0;
+	border-radius: 0.2rem;
+	font-size: 0.9rem;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.btn:hover {
+	background: chocolate; /*마우스를 올려놓을 때*/
+}
+.btn:focus {
+	background: red; /*클릭 후 계속 포커스 상태일 때*/
+}
+.btn:active {
+	background: brown; /*클릭 중일 때*/
+}
+
+/* 넣을때 순서 중요, hofa 호빠 */

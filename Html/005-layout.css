@@ -1,7 +1,15 @@
+@font-face {
+	font-family: 'nanumSqaure';
+	src: url(https://github.com/moonspam/NanumSquare);
+}
+body {
+	font-family: 'nanumSqaure';
+}
 * {
 	margin: 0px;
 	box-sizing: border-box;
 }
+
 .main-background {
 	position: relative;
 	width: 100%;

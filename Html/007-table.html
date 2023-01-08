@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="./007-table.css" rel="stylesheet" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="cart-main">
+			<div class="cart-background">
+				<h3>Your Shopping Cart</h3>
+				<table class="cart-table">
+					<thead>
+						<tr>
+							<th></th>
+							<th>ITEM</th>
+							<th>AMOUNT</th>
+							<th>PRICE</th>
+							<th>TOTAL</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><img src="./img/camera1.png" width="100px" /></td>
+							<td>
+								<div>SONY</div>
+								<div>FE 70-200 mm F.28GM OSS</div>
+							</td>
+							<td>1</td>
+							<td>€ 1979.00</td>
+							<td>€ 1979.00</td>
+						</tr>
+						<tr>
+							<td><img src="./img/camera2.png" width="100px" /></td>
+							<td>
+								<div class="item-title">SONY</div>
+								<div class="item-subtitle">Sonnar T* E 24mm F1.8 ZA</div>
+							</td>
+							<td>1</td>
+							<td>€ 989.00</td>
+							<td>€ 989.00</td>
+						</tr>
+						<tr>
+							<td colspan="5" style="text-align: right">€ 2968.00</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="cart-footer">
+					<div>Edit your shopping cart</div>
+					<button class="btn">Choose payment method</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<!-- 
+  Learning List
+  nth-child: 같은 요소중 몇번째 요소인지 css style 지정
+  class명칭 도배자제할때 사용하면 좋음
+
+  border-collapse : collapse; 
+  테이블 간 간격 제거
+
+  colspan : 셀 가로 병합, 이후 숫자 입력
+  
+ -->
