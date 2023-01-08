@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.flex-container {
+	height: 3rem;
+	display: flex;
+	background-color: darkslategray;
+	color: white;
+	font-weight: 600;
+	align-items: center;
+	padding: 1rem;
+	/* flex-wrap: wrap; */
+}
+.flex-item {
+	margin: 1rem;
+}
+.flex-item:nth-child(1) {
+	font-size: 2rem;
+	flex-grow: 2;
+}
+.flex-item:nth-child(2),
+.flex-item:nth-child(3) {
+	font-size: 1.3rem;
+}
