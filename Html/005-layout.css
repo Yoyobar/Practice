@@ -8,6 +8,7 @@ body {
 * {
 	margin: 0px;
 	box-sizing: border-box;
+	transition: all 0.5s;
 }
 
 .main-background {
@@ -52,6 +53,7 @@ body {
 	font-size: 1rem;
 	color: white;
 	transition: all 0.5s;
+	z-index: 2;
 }
 .btn-secondary {
 	position: absolute;
@@ -65,6 +67,7 @@ body {
 	font-size: 1rem;
 	color: white;
 	transition: all 0.5s;
+	z-index: 2;
 }
 
 .main-background form input[type='text'] {
@@ -198,4 +201,52 @@ input[id='cb1'] + label {
 input[id='cb1']:checked + label {
 	background-color: cornflowerblue;
 	transition: all 0.5s;
+}
+
+.flex-container {
+	height: 3rem;
+	background-color: darkslategray;
+	color: white;
+	font-weight: 600;
+	display: table;
+	width: 100%;
+	/* flex-wrap: wrap; */
+}
+.flex-item {
+	padding: 0.2rem;
+}
+.flex-item:nth-child(1) {
+	font-size: 1.5rem;
+	display: table-cell;
+	vertical-align: middle;
+	width: 90%;
+}
+.flex-item:nth-child(2),
+.flex-item:nth-child(3) {
+	font-size: 1.3rem;
+	display: table-cell;
+	vertical-align: middle;
+}
+/* display:flex가 더 편하나 table로도 가능함. */
+
+/* 브라우저 폭 1200px 이하일경우 1200/992/768/576*/
+@media screen and (max-width: 1200px) {
+	.main-background > h4 {
+		font-size: 30px;
+	}
+	.main-background > p {
+		font-size: 16px;
+	}
+	.sub-background {
+		top: 15rem;
+		transition: all 1s;
+		z-index: 1;
+	}
+	.flex-container > div:nth-child(1) {
+		font-size: 1.3rem;
+	}
+	.flex-container > div:nth-child(2),
+	.flex-container > div:nth-child(3) {
+		font-size: 1rem;
+	}
 }
